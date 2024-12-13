@@ -1,4 +1,5 @@
 #sample_format should be ~.bam and ~.bam.bai
-#please edit json file to put sample name
-#working exmaple directory: /home/syjoo/program/gatk-sv/gatksv_run
-java -Xmx128g -jar  -Dconfig.file=./cromwell.example.conf /home/syjoo/program/Mito/cromwell-57.jar run /home/syjoo/program/gatk-sv/gatksv_run/wdl/GATKSVPipelineSingleSample.wdl --inputs ./GATKSVPipelineSingleSample.no_melt.json -p /home/syjoo/program/gatk-sv/gatksv_run/wdl/dep.zip
+#please edit json file to put the sample name of your interest as well as docker images that you've built on your local server.
+#exmaple working directory: [directory-where-you-pull-the-git]/gatksv_run
+#please edit 'cromwell.example.conf' file, especially the line starting with 
+java -Xmx128g -jar  -Dconfig.file=[directory-where-you-pull-the-git]/cromwell.example.conf [path-to-cromwell]/cromwell-57.jar run [directory-where-you-pull-the-git]/gatksv_run/wdl/GATKSVPipelineSingleSample.wdl --inputs [directory-where-you-pull-the-git]/GATKSVPipelineSingleSample.no_melt.json -p [directory-where-you-pull-the-git]/gatksv_run/wdl/dep.zip
