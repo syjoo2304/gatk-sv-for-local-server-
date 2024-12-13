@@ -1,0 +1,4 @@
+#sample_format should be ~.bam and ~.bam.bai
+#please edit json file to put sample name
+#working exmaple directory: /home/syjoo/program/gatk-sv/gatksv_run
+java -Xmx128g -jar  -Dconfig.file=./cromwell.example.conf /home/syjoo/program/Mito/cromwell-57.jar run /home/syjoo/program/gatk-sv/gatksv_run/wdl/GATKSVPipelineSingleSample.wdl --inputs ./GATKSVPipelineSingleSample.no_melt.json -p /home/syjoo/program/gatk-sv/gatksv_run/wdl/dep.zip
